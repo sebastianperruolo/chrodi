@@ -3,7 +3,7 @@
   "name": "Kodi Chrome App",
   "short_name": "Chrodi",
   "description": "A Chrome App wrapper for Kodi web UI",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "minimum_chrome_version": "38",
 
   "icons": {

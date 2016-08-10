@@ -1,8 +1,15 @@
 /* CSS file placeholder. */
 body {
-  margin:0;
+  background: #eee;
 }
 
-kodi {
+.mui--text-title, h3 {
+    font-size: 31px;
+    line-height: 28px;
+    padding: 18px;
+}
+
+#kodi {
   
 }
+

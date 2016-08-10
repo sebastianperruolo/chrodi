@@ -1,19 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-  <title>Kodi</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-  <webview id="kodi" ></webview>
-  <div id="loading">loading!</div>
-  <form id="config">
-    <h1>Configure Kodi location</h1>
-    <label>URL:</label>
-    <input id="url">
-    <input type="submit" value="Ok">
-  </form>
-  <script src="main.js"></script>
-</body>
+  <head>
+    <title>Kodi</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- load MUI -->
+    <link href="mui-0.6.8/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="mui-0.6.8/js/mui.min.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <webview id="kodi" ></webview>
+    <div id="loading" class="mui-container">
+      <div class="mui-appbar mui--z2"><div class="mui--text-title">Chrodi</div></div>
+      <br/>
+      <div class="mui-panel">
+        <h2>Loading</h2>
+        <p>Loading Kodi web UI on <a target="_blank" id="loading-url"></a></p>
+        <button class="mui-btn mui-btn--primary mui-btn--raised" id="loading-cancel">Cancel</button>
+      </div>
+    </div>
+    <div id="config" class="mui-container">
+      <div class="mui-appbar mui--z2"><div class="mui--text-title">Chrodi</div></div>
+      <br/>
+      <div class="mui-panel mui--z2">
+        <form id="config-form">
+          <legend>Configuration</legend>
+          <div class="mui-textfield">
+            <input id="url" type="text" placeholder="http://kodi-server:8080/">
+            <label>Kodi web UI URL</label>
+          </div>
+          <input type="submit" class="mui-btn mui-btn--primary mui-btn--raised" value="Save">
+        </form>
+      </div>
+    </div>
+    
+    <script src="main.js"></script>
+  </body>
 </html>

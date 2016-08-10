@@ -1,12 +1,17 @@
+var g = function(e) { return (typeof e === 'string' ? document.getElementById(e) : e ); };
+
 window.onload = function() {
-//store.url('http://localhost:8080/');  
+  
+  //store.url('http://localhost:8080/');  
+
   var kodi = (function(webviewId) {
-    var webview = document.getElementById(webviewId);
+    var webview = g(webviewId);
     var good = true;
     webview.addEventListener("loadstart", function(e) {
       // string	url	Requested URL.
       // boolean	isTopLevel	Whether the load is top-level or in a subframe.
       console.log("WEB loading: " + e.url);
+      
     });
     
     webview.addEventListener("loadabort", function(e) {
@@ -39,12 +44,18 @@ window.onload = function() {
 
     return {
       load: function() {
+        var loadingURL = g('loading-url');
         sections.show("loading");
         webview.stop();
         good = true;
         store.url(function(url) {
           webview.src = url;
+          loadingURL.innerHTML = url;
+          loadingURL.setAttribute('href', url);
         });
+      },
+      stop: function() {
+        webview.stop();
       }
     };
   }("kodi"));
@@ -52,9 +63,8 @@ window.onload = function() {
   kodi.load();
   
   var form = (function(formId) {
-    var g = function(e) { return (typeof e === 'string' ? document.getElementById(e) : e ); };
-    
-    var f = g(formId);
+
+    var f = g('config-form');
     var _url = g('url');
     
     f.addEventListener("submit", function(e) {
@@ -75,6 +85,10 @@ window.onload = function() {
   store.listen('url', function(url) {
     form.url(url);
   });
+  g('loading-cancel').addEventListener("click", function() {
+    kodi.stop();
+  });
+  
 };
 
 // "http://192.168.1.100:8080/"
@@ -113,11 +127,7 @@ var store = (function() {
 }());
 
 var sections = function(ids) {
-  // get an element
-  var g = function(e) { 
-    return (typeof e === 'string' ? document.getElementById(e) : e ); 
-  };
-  
+
   // hide a section
   var hide = function(id) { g(id).style.display = 'none'; };
   
