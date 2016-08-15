@@ -88,7 +88,9 @@ window.onload = function() {
   g('loading-cancel').addEventListener("click", function() {
     kodi.stop();
   });
-  
+
+  Chrodi.sampleIP('hintIP');
+
 };
 
 // "http://192.168.1.100:8080/"

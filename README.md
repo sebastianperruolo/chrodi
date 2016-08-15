@@ -4,6 +4,13 @@ A Chrome App wrapper for Kodi web UI
 ## Installation
 If you want to install this Chrome App please go to the [Chrome web store](https://chrome.google.com/webstore/detail/kodi-chrome-app/dachpjcniijcophipfcedfiafioajkne)
 
+## Changelog
+
+v0.0.4 Added help text to Configuration page
+v0.0.3 Added Material Design
+v0.0.2 Updated README
+v0.0.1 First version
+
 ## Why?
 
 I own a Chromebook which I use to remote control my Kodi. The web UI is the first thing I started to use, I really love [Chorus](http://kodi.wiki/view/Add-on:Chorus). Then I installed [Kassi - Kodi/XBMC Remote Control](https://chrome.google.com/webstore/detail/kassi-kodixbmc-remote-con/jgannjdjlpnoibphpbmmfjkejcfhcmjp) and [Play to Kodi](https://chrome.google.com/webstore/detail/play-to-kodi/fncjhcjfnnooidlkijollckpakkebden). Those utility tools are very good but I wanted something that behaves like an app, like my iPhone remote control.

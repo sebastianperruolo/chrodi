@@ -28,15 +28,22 @@
       <div class="mui-panel mui--z2">
         <form id="config-form">
           <legend>Configuration</legend>
+          <p>
+            In order to use Chrodi, you need to <b>enable Kodi web interface</b>. If you need help, please follow the instructions in <a target="_blank" href="http://kodi.wiki/view/web_interface">Kodi wiki</a>. 
+          </p>
           <div class="mui-textfield">
             <input id="url" type="text" placeholder="http://kodi-server:8080/">
-            <label>Kodi web UI URL</label>
+            <label>Kodi web interface URL</label>
           </div>
+          <p id="hintIP"></p>
+          <p>
+            If you need help to know the IP address, the <a target="_blank" href="https://yatse.tv/redmine/projects/yatse/wiki/XbmcNetwork">instructions from Yatse remote</a> may help you.
+          </p>
           <input type="submit" class="mui-btn mui-btn--primary mui-btn--raised" value="Save">
         </form>
       </div>
     </div>
-    
+    <script src="utils.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
