@@ -6,10 +6,10 @@ If you want to install this Chrome App please go to the [Chrome web store](https
 
 ## Changelog
 
-v0.0.4 Added help text to Configuration page
-v0.0.3 Added Material Design
-v0.0.2 Updated README
-v0.0.1 First version
+* v0.0.4 Added help text to Configuration page
+* v0.0.3 Added Material Design
+* v0.0.2 Updated README
+* v0.0.1 First version
 
 ## Why?
 
